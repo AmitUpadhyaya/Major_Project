@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>
+            Login page
+        </title>
+        <link rel="stylesheet" href="page.css">
+        <link rel="stylesheet" href="{% static 'login_css/page.css' %}" type="text/css" >
+        <script src="login.js"></script>
+      <script src="{% static 'js/login.js'%}"></script>
+    </head>
+    
+    <body>
+        
+        <div class ="Img">
+             <img src={%static "login_css/0.jpg"%} alt="logo">
+        </div>
+        
+        <div class ="Navbar">
+            <a class= "log" href="webpage.html"> Home</a>
+            <a href="contact.html"> Contact</a>
+            <a href="about.html"> About us</a> 
+        </div>
+        
+       <div id="Loginbox">
+           <form action="{% url 'submitBtn' %}">
+              <div class="left">
+                <h1>Log In</h1>
+                  <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="E-mail" >
+<!--                <input type="password" name="password" placeholder="Enter Your Password" />  -->
+                  <input type="password" id="psw" name="password" placeholder="Password"
+                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Must contain at least one number and one uppercase and lowercase letter, and at
+               least 8 or more characters" required>
+                <input type="submit" name="signup_submit" value="Sign in" />
+                  <i style="position: absolute;top:200px; right:100px"> Create an account</i>
+                  <a style="position: absolute;top:220px; right:135px" href="Signup/"> SignUp</a>
+              </div>
+
+              <div class="right">
+                <span class="loginwith">Sign in with social</span>
+                <button  onclick="window.location.href='https://www.facebook.com/';"
+                class="social-signin facebook"> Log in with facebook</button>
+                <button onclick="window.location.href='https://www.twitter.com/explore';"
+                 class="twitter"> Log in with twitter</button>
+                <button class="google"> Log in with Google</button>
+              </div>
+           </form>
+
+        </div>
+         <div id="message">
+            <h3>Password must contain the following:</h3>
+             <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+{{ data }}
+  <head>
+    <title>Bootstrap example</title>
+    <link rel="stylesheet" href="page2.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="carou.js"></script>
+      <script src="{% static 'js/carou.js'%}"></script>
+      <link rel="stylesheet" href="{% static 'css/page2.css' %}" type="text/css" >
+  </head>  
+  <body>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <!-- <a class="navbar-brand" href="#">
+           <img alt="OSAHANEAT" src="log.jpg" style="height: 100%;">
+           </a> -->
+           <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-cutlery" ></span>OSAHANEAT</a>
+         </div>
+          <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav"> 
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Offers</a></li>
+               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Restaurant <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Listing</a></li>
+                    <li><a href="#">Detail + Cart</a></li>
+                    <li><a href="#">Checkout</a></li>
+                 </ul>
+                </li>           
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Track order</a></li>
+                    <li><a href="#">Invoice</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                  </ul>
+                </li>    
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> MyAccount <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Orders</a></li>
+                      <li><a href="#">Offer</a></li>
+                      <li><a href="#">Favourites</a></li>
+                      <li><a href="#"> payments</a></li>
+                      <li><a href="#">Address</a></li>
+                   </ul> 
+                 </li>   
+                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-shopping-cart">cart <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Track order</a></li>
+                      <li><a href="#">Invoice</a></li>
+                      <li><a href="#">Login</a></li>
+                      <li><a href="#">Register</a></li>
+                   </ul>  
+                  </li>
+            </ul>
+          </ul>
+        </div> 
+      </nav> 
+
+      <div class="deals" > 
+        
+             <h1 class="text-center" style="color: rgb(3, 3, 3); font-size: 50px;"><br> 
+
+              <b>Offers Near You</b> <br> <i style="color: rgb(3, 3, 3); font-size: 30px;"> Best deals at your favourite restaurant</i></h1>
+          
+       </div>
+       <div class="middle" style="background-color:whitesmoke; height: 700px;">
+        <div class="tech-slideshow" >
+          <div class="mover-1"></div>
+          <div class="mover-2"></div>
+        </div>
+          
+            <div class="filters-0" style="width: 150px;height: 100px; background-color: whitesmoke; margin-left: 4em;"> 
+                <p style="color: rgb(7, 7, 8); font-size: 30px;"> <b>Filter by</b></p>
+            </div>
+
+            <div class="filters-1" style="width: 150px;height: 100px; background-color: whitesmoke; margin-left: 4em;">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i style="font-size: 15px; color: blue;"  >Location </i>&emsp;&emsp; <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li> <input unchecked="true" type="checkbox" value="food"/>
+                        <label>Minneapolis</label></li>
+                      <li> <input unchecked="true" type="checkbox" value="food"/>
+                        <label>Plymouth</label></li>
+                      <li> <input unchecked="true" type="checkbox" value="food"/>
+                        <label>Eden prairie</label></li>
+                   </ul>
+                </li>   
+           </div>
+            <div class="filters-2" style="width: 150px;height: 100px; background-color: whitesmoke; margin-left: 4em;">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i style="font-size: 15px; color: blue;" > All Cuisine </i>&emsp;&emsp; <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li> <input unchecked="true" type="checkbox" value="food"/>
+                        <label>American</label></li>
+                      <li> <input unchecked="true" type="checkbox" value="food"/>
+                        <label>Indian</label></li>
+                      <li> <input unchecked="true" type="checkbox" value="food"/>
+                        <label>Pizza</label></li>
+                   </ul>
+                </li>   
+           </div>
+           <div class="filters-3" style="width: 150px;height: 100px; background-color: whitesmoke; margin-left: 4em;">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i style="font-size: 15px; color: blue;" > Feature </i>&emsp;&emsp; <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li> <input unchecked="true" type="checkbox" value="food"/>
+                    <label>Free Delivery</label></li>
+                  <li> <input unchecked="true" type="checkbox" value="food"/>
+                    <label>Coupons</label></li>
+                  <li> <input unchecked="true" type="checkbox" value="food"/>
+                    <label>Open Now</label></li>
+               </ul>
+            </li>   
+       </div>
+       <div class="filters-4" style="width: 150px;height: 100px; background-color: whitesmoke; margin-left: 4em;">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i style="font-size: 15px; color: blue;" > Category </i>&emsp;&emsp; <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li> <input ununchecked="true" type="checkbox" value="food"/>
+                <label>Delivery</label></li>
+              <li> <input unchecked="true" type="checkbox" value="food"/>
+                <label>Dine-out</label></li>
+              <li> <input unchecked="true" type="checkbox" value="food"/>
+                <label> Cafes</label></li>
+           </ul>
+        </li>   
+   </div> 
+      
+                
+            <div class="Rest-info" style="width: 1000px;height: 700px; 
+                  background-color: whitesmoke;
+                  position: relative; left: 23em; bottom: 35.5em;">
+                 <div class="thumbnail-1" style="width: 256px; height: 158px;">
+
+                        <img src={%static "images/prom2.png"%} alt="Lights" class="img-rounded" style="width:80%; height:100%;">
+                        <div class="caption">
+                            <a href="bootcamp3">
+                          <p> <b>World famous </b> </a> </br> Indian / American / Pure Veg</p>
+                          <p><span class="glyphicon glyphicon-time" ></span> 25-30 min &emsp; &emsp; &emsp;&emsp; $250 for two</p>
+                          <p style="font-size: 10px;"> 
+                            <mark style="background-color: rgb(146, 47, 29); color: whitesmoke;"> offer</mark>
+                            65% off | Use Coupon OSAHANEAT</p>
+                         </div>
+                  </div>
+                  <div class="thumbnail-2" style="width: 256px; height: 158px;
+                       position: relative;left: 24em; bottom: 11.3em;">
+                      <a href="bootcamp3">
+                        <img src={%static "images/prom1.png"%}  alt="Lights" class="img-rounded"  style="width:80%; height:100%;">
+                        <div class="caption">
+                          <p> <b>KARCHI KADAI </b> </a> </br> Indian / S.Indian / NON-Veg</p>
+                          <p><span class="glyphicon glyphicon-time" ></span> 25-30 min &emsp; &emsp; &emsp;&emsp; $350 for two</p>
+                          <p style="font-size: 10px;"> 
+                            <mark style="background-color: rgb(151, 196, 226); color: rgb(39, 37, 37);"> offer</mark>
+                            40% off | Use Coupon TODAYSPECIAL</p>
+                       </div>                    
+                  </div>
+                  <div class="thumbnail-3" style="width:256px; height: 158px;
+                  position: relative;left: 48em; bottom: 22.55em;">
+                    <a href="bootcamp3">
+                        <img src={%static "images/prom3.png"%}  alt="Lights"class="img-rounded"  style="width:80%; height:100%;">
+                        <div class="caption">
+                          <p> <b>HO-CHI-MIN </b> </a> </br> Chinese / Korean / Sea food</p>
+                          <p><span class="glyphicon glyphicon-time" ></span> 25-30 min &emsp; &emsp; &emsp;&emsp; $450 for two</p>
+                          <p style="font-size: 10px;"> 
+                            <mark style="background-color: rgb(126, 245, 132); color: whitesmoke;"> offer</mark>
+                            55% off | Use Coupon WELCOME</p>
+                       </div>                    
+                  </div>
+                  <div class="thumbnail-4" style="width: 256px; height: 158px;
+                      position: relative;left: 0em; bottom: 6.6em;">
+                       <a href="bootcamp3">
+                        <img src={%static "images/prom4.png"%}  alt="Lights" class="img-rounded"  style="width:80%; height:100%;">
+                        <div class="caption">
+                          <p> <b>Chipotle </b> </a> </br> Mexican / Grill / Snacks </p>
+                          <p><span class="glyphicon glyphicon-time" ></span> 25-30 min &emsp; &emsp; &emsp;&emsp; $150 for two</p>
+                          <p style="font-size: 10px;"> 
+                            <mark style="background-color: tomato; color: whitesmoke;"> offer</mark>
+                            25% off | Use Coupon BOWL</p>
+                       </div>                  
+                  </div>
+                  <div class="thumbnail-5" style="width: 256px; height: 158px;
+                  position: relative;left: 24em; bottom: 18em;">
+                   <a href="bootcamp3">
+                    <img src={%static "images/prom5.png"%}  alt="Lights" class="img-rounded" style="width:80%; height:100%;">
+                    <div class="caption">
+                      <p> <b>Bay leaf </b> </a> </br> Indian / Tandoor / Grill </p>
+                      <p><span class="glyphicon glyphicon-time" ></span> 25-30 min &emsp; &emsp; &emsp;&emsp; $150 for two</p>
+                      <p style="font-size: 10px;"> 
+                        <mark style="background-color: tomato; color: whitesmoke;"> offer</mark>
+                        25% off | Use Coupon SUPERSUNDAY</p>
+                   </div>                  
+              </div>
+              <div class="thumbnail-6" style="width: 256px; height: 158px;
+                  position: relative;left: 48em; bottom: 29.2em;">
+                    <a href="bootcamp3">
+                        <img src={%static "images/prom6.png"%}  alt="Lights" class="img-rounded"  style="width:80%; height:100%;">
+                        <div class="caption">
+                          <p> <b>Filfillah </b> </a> </br> Mediterranean / Turkish / Bakery</p>
+                          <p><span class="glyphicon glyphicon-time" ></span> 25-30 min &emsp; &emsp; &emsp;&emsp; $450 for two</p>
+                          <p style="font-size: 10px;"> 
+                            <mark style="background-color: rgb(126, 245, 132); color: whitesmoke;"> offer</mark>
+                            55% off | Use Coupon OSAHANEAT</p>
+                       </div>                    
+                  </div>
+                  
+            </div>
+      </div>
+     
+<!--    background: url(https://1.bp.blogspot.com/-t5cs5iCBrpQ/XulexLI14eI/AAAAAAAAAAo/A7KZWtC_E3AD3W1bfE1WO0C_MEmppZM4gCK4BGAsYHg/w625-h63/collage%2B2.jpg);
+ this is for carasoul-->
+      
+    </body>
+

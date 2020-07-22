@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>
+            Login page
+        </title>
+        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="{% static 'css/signup.css' %}" type="text/css" >
+        <script src="signup.js"></script>
+      <script src="{% static 'js/signup.js'%}"></script>
+    </head>
+
+    <body>
+
+<!--        <div class ="Img">-->
+<!--             <img src={%static "login_css/0.jpg"%} alt="logo">-->
+<!--        </div>-->
+
+<!--        <div class ="Navbar">-->
+<!--            <a class= "log" href="webpage.html"> Home</a>-->
+<!--            <a href="contact.html"> Contact</a>-->
+<!--            <a href="about.html"> About us</a>-->
+<!--        </div>-->
+
+       <div class="container">
+          <form action="{% url 'signupBtn' %}">
+              <label for="name">Enter you name</label>
+               <input type="text" name="name"  required />
+            <label for="usrname">Email</label>
+            <input type="text" id="usrname" name="usrname" required>
+
+               <label for="psw">Password</label>
+               <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Must contain at least one number and one uppercase and lowercase letter, and at
+               least 8 or more characters" required>
+
+
+               <input  type="submit" value="Submit">
+          </form>
+       </div>
+
+        <div id="message">
+            <h3>Password must contain the following:</h3>
+             <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        </div>
+
+    </body>
+</html>
